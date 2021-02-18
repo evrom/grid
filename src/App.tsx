@@ -20,8 +20,9 @@ const App: React.FC = () => {
       <header>
         <h1>CSS Grid Template Validator & Preview</h1>
         <div>
-          Paste your <code>grid-template-areas</code> property value and see a
-          preview and diagnosis what is wrong.
+          Validate CSS Grid Template Area property values. Paste your{" "}
+          <code>grid-template-areas</code> property value to preview, validate,
+          and debug.
         </div>
       </header>
       <main>
