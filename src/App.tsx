@@ -46,6 +46,16 @@ const App: React.FC = () => {
         />
         <GridTable gridTemplate={grid.gridTemplate} />
       </main>
+      <footer>
+        <ul>
+          <a href="https://github.com/evrom/grid-validator">
+            <li>Github</li>
+          </a>
+          <a href="https://evrom.github.io/">
+            <li>About me</li>
+          </a>
+        </ul>
+      </footer>
     </div>
   );
 };
