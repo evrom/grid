@@ -5,8 +5,12 @@ class CssGridTemplateAreas {
   gridTemplate: string[][];
 
   constructor(gridTemplateString: string) {
+    const templateWithoutComments = gridTemplateString.replace(
+      /\s*(?!<")\/\*[^*]+\*\/(?!")\s*/g,
+      ""
+    );
     const rows = Array.from(
-      gridTemplateString.matchAll(/["']([^"']*)["']/g)
+      templateWithoutComments.matchAll(/["']([^"']*)["']/g)
     ).map((match) => match[1]);
     this.gridTemplate = rows.map((row) => compact(row.trim().split(" ")));
   }

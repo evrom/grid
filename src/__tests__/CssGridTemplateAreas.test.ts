@@ -15,6 +15,15 @@ test("converts template string into string[][]", () => {
   ]);
 });
 
+test("converts template string with comments into string[][]", () => {
+  expect(
+    new CssGridTemplateAreas('/* "hey" */ "a ." /* "hi"" */ ". b"').gridTemplate
+  ).toStrictEqual([
+    ["a", "."],
+    [".", "b"],
+  ]);
+});
+
 test("count rows", () => {
   expect(new CssGridTemplateAreas(gridTemplateString).rows()).toBe(3);
 });
