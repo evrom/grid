@@ -1,5 +1,5 @@
-import CssGridTemplateAreas from "./CssGridTemplateAreas";
-import gridExamples from "./gridExamples";
+import CssGridTemplateAreas from "../CssGridTemplateAreas";
+import gridExamples from "../gridExamples";
 
 const gridTemplateString = `           "a a ."
 "a a ."
@@ -45,6 +45,12 @@ test("is rectangular", () => {
 
 test("count columns", () => {
   expect(new CssGridTemplateAreas(gridTemplateString).columns()).toBe(3);
+});
+
+test("throw on non-rectangular", () => {
+  expect(() =>
+    new CssGridTemplateAreas(gridExamples["Not Rectangular"]).columns()
+  ).toThrow();
 });
 
 test("names of areas", () => {

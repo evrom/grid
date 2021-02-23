@@ -28,11 +28,18 @@ const App: React.FC = () => {
         </div>
       </header>
       <main>
-        <textarea onChange={onGridInputChange} value={gridInput}></textarea>
+        <label htmlFor="grid-template-areas">
+          <code>grid-template-areas:</code>
+        </label>
+        <textarea
+          id="grid-template-areas"
+          onChange={onGridInputChange}
+          value={gridInput}
+        ></textarea>
         <div>
           Examples:
           {Object.entries(gridExamples).map(([name, value]) => (
-            <button key="name" onClick={() => setGridInput(value)}>
+            <button key={name} onClick={() => setGridInput(value)}>
               {name}
             </button>
           ))}
