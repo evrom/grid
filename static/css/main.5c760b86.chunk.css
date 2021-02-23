@@ -1,0 +1,2 @@
+.grid-preview{border:1px solid;display:grid;grid-gap:10px;gap:10px;background-color:beige}.grid-preview>div{display:flex;justify-content:center;align-items:center;background-color:#2f4f4f}.grid-table td{border:1px solid}.grid-properties{list-style:none}.grid-properties li:before{content:"✓";color:green}.grid-properties li.invalid:before{content:"✗";color:red}button{font-size:14px;padding:7px 10px}
+/*# sourceMappingURL=main.5c760b86.chunk.css.map */
